@@ -3,7 +3,7 @@ terraform {
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = "~> 2.90.0"
+      version = "~> 3.20.0"
     }
   }
 
@@ -12,4 +12,14 @@ terraform {
 
 provider "azurerm" {
   features {}
+}
+
+resource "azurerm_resource_group" "main" {
+  name = "Learn-tf-rg-zan"
+  location = "southafricanorth"
+  tags = {
+    "Owner" = "Matthew Levy"
+    "Application" = "Terraform"
+    "Environment" = "Dev"
+  }
 }

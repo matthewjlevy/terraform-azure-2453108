@@ -3,7 +3,7 @@ terraform {
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = "~> 2.90.0"
+      version = "~> 3.20.0"
     }
   }
 
@@ -12,10 +12,4 @@ terraform {
 
 provider "azurerm" {
   features {}
-}
-
-#Creates resource group
-resource "azurerm_resource_group" "main" {
-  name     = "learn-tf-rg-eastus"
-  location = "eastus"
 }
